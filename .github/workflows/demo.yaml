@@ -1,0 +1,50 @@
+name: Live demo website — GH Pages
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+env:
+  CI: true
+  FORCE_COLOR: true
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  deploy-demo:
+    name: Deploy demo
+
+    runs-on: ubuntu-20.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout code repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # ————————————————————————————————————————————————————————————————————————
+
+      - name: Setup Node
+        uses: JulianCataldo/gh-actions/node-pnpm@main
+
+      # ————————————————————————————————————————————————————————————————————————
+
+      - name: Build demo website
+        run: "pnpm run build"
+
+      - name: Upload artifact — Demo
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages — Demo
+        id: deployment
+        uses: actions/deploy-pages@v1
