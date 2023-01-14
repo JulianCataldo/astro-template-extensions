@@ -1,3 +1,13 @@
+# Astro — Template extensions (Web Components proposal)
+
+```
+pnpx degit https://github.com/JulianCataldo/astro-template-extensions astro-te-demo
+```
+
+Based on: <https://github.com/luwes/template-extensions>.
+
+See the [live demo](https://juliancataldo.github.io/astro-template-extensions).
+
 # Astro Starter Kit: Minimal
 
 ```
