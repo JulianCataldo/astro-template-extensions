@@ -1,10 +1,11 @@
-# Astro — Template extensions (Web Components proposal)
+# Astro — Template Extensions (Web Components proposal)
+
+An AstroJS adaptation of the [Template Extensions](https://github.com/luwes/template-extensions) examples.
 
 ```
 pnpx degit https://github.com/JulianCataldo/astro-template-extensions astro-te-demo
+cd astro-te-demo && pnpm i && pnpm dev
 ```
-
-Based on: <https://github.com/luwes/template-extensions>.
 
 See the [live demo](https://juliancataldo.github.io/astro-template-extensions).
 
