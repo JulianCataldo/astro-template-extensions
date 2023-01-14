@@ -11,6 +11,10 @@ See the [live demo](https://juliancataldo.github.io/astro-template-extensions).
 
 See also [custom-elements-ssr](https://github.com/thepassle/custom-elements-ssr#readme), could be explored for isomorphic template strings bindings + rendering, with an AstroJS renderer.
 
+# Notes
+
+- We can escape template strings variables with `{'{{ var }}'}` or `is:raw` Astro directive.
+
 # Astro Starter Kit: Minimal
 
 ```
