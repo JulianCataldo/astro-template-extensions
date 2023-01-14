@@ -9,6 +9,8 @@ cd astro-te-demo && pnpm i && pnpm dev
 
 See the [live demo](https://juliancataldo.github.io/astro-template-extensions).
 
+See also [custom-elements-ssr](https://github.com/thepassle/custom-elements-ssr#readme), could be explored for isomorphic template strings bindings + rendering, with an AstroJS renderer.
+
 # Astro Starter Kit: Minimal
 
 ```
